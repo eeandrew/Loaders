@@ -27,7 +27,9 @@ const style2div = {
 	'pacman':5,
 	'semi-circle-spin':1,
 	'ball-grid-beat':9,
-	'ball-scale-random':3
+	'ball-scale-random':3,
+	'quarter-ring-spin':1,
+	'semi-circle-flash-spin':1,
 }
 
 function getDivCount(style) {

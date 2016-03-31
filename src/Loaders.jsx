@@ -1,5 +1,5 @@
 import React from 'react';
-import './loaders.min.css';
+import './loaders.css';
 import {getDivCount} from './LoaderUtils.jsx';
 
 export default class Loaders extends React.Component {

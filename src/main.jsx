@@ -38,6 +38,8 @@ const MyLoaders = (props)=>{
 				<Loaders  loadingStyle="semi-circle-spin"/>
 				<Loaders  loadingStyle="ball-grid-beat"/>
 				<Loaders  loadingStyle="ball-scale-random"/>
+				<Loaders loadingStyle="quarter-ring-spin"/>
+				<Loaders loadingStyle="semi-circle-flash-spin"/>
 			</div>
 	);
 }
