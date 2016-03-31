@@ -10,8 +10,9 @@ export default class Loaders extends React.Component {
 	getPlaceholderDiv() {
 		var childrenCount = getDivCount(this.props.loadingStyle);
 		const children = [];
-		const childStyle = {
-			backgroundColor : this.props.color,
+		const childStyle = {};
+		if('color' in this.props) {
+			childStyle.backgroundColor = this.props.color;
 		}
 		if('width' in this.props) {
 			childStyle.width = this.props.width;
@@ -41,9 +42,4 @@ Loaders.propTypes = {
 	loadingStyle : React.PropTypes.string,
 	width : React.PropTypes.string,
 	height : React.PropTypes.string
-}
-
-Loaders.defaultProps = {
-	color:'#FFF',
-	loadingStyle:'ball-clip-rotate',
 }

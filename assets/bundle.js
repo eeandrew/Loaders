@@ -75,36 +75,36 @@
 		return _react2.default.createElement(
 			'div',
 			{ className: 'main-content' },
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-pulse' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-grid-pulse' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-clip-rotate' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-clip-rotate-pulse' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'square-spin' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-clip-rotate-multiple' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-rotate' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'cube-transition' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-zig-zag' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-zig-zag-deflect' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-triangle-path' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-scale' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'line-scale' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'line-scale-party' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-scale-multiple' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-pulse-sync' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-beat' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'line-scale-pulse-out' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'line-scale-pulse-out-rapid' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-scale-ripple' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-scale-ripple-multiple' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-spin-fade-loader' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-spin-fade-loader' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'line-spin-fade-loader' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'line-spin-fade-loader' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'triangle-skew-spin' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'pacman' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'semi-circle-spin' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-grid-beat' }),
-			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-scale-random' })
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'ball-pulse' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'ball-grid-pulse' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'ball-clip-rotate' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'ball-clip-rotate-pulse' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'square-spin' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'ball-clip-rotate-multiple' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'ball-rotate' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'cube-transition' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'ball-zig-zag' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'ball-zig-zag-deflect' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'ball-triangle-path' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'ball-scale' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'line-scale' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'line-scale-party' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'ball-scale-multiple' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'ball-pulse-sync' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'ball-beat' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'line-scale-pulse-out' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'line-scale-pulse-out-rapid' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'ball-scale-ripple' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'ball-scale-ripple-multiple' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'ball-spin-fade-loader' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'ball-spin-fade-loader' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'line-spin-fade-loader' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'line-spin-fade-loader' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'triangle-skew-spin' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'pacman' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'semi-circle-spin' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'ball-grid-beat' }),
+			_react2.default.createElement(_Loaders2.default, { loadingStyle: 'ball-scale-random' })
 		);
 	};
 
@@ -19753,9 +19753,10 @@
 			value: function getPlaceholderDiv() {
 				var childrenCount = (0, _LoaderUtils.getDivCount)(this.props.loadingStyle);
 				var children = [];
-				var childStyle = {
-					backgroundColor: this.props.color
-				};
+				var childStyle = {};
+				if ('color' in this.props) {
+					childStyle.backgroundColor = this.props.color;
+				}
 				if ('width' in this.props) {
 					childStyle.width = this.props.width;
 				}
@@ -19793,11 +19794,6 @@
 		loadingStyle: _react2.default.PropTypes.string,
 		width: _react2.default.PropTypes.string,
 		height: _react2.default.PropTypes.string
-	};
-
-	Loaders.defaultProps = {
-		color: '#FFF',
-		loadingStyle: 'ball-clip-rotate'
 	};
 
 /***/ },
