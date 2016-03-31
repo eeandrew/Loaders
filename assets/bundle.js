@@ -65,10 +65,50 @@
 
 	var _Loaders2 = _interopRequireDefault(_Loaders);
 
+	__webpack_require__(166);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	document.body.style.background = "#ed5565";
-	_reactDom2.default.render(_react2.default.createElement(_Loaders2.default, { color: '#F5F5F5' }), document.getElementById('app'));
+
+	var MyLoaders = function MyLoaders(props) {
+		return _react2.default.createElement(
+			'div',
+			{ className: 'main-content' },
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-pulse' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-grid-pulse' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-clip-rotate' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-clip-rotate-pulse' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'square-spin' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-clip-rotate-multiple' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-rotate' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'cube-transition' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-zig-zag' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-zig-zag-deflect' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-triangle-path' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-scale' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'line-scale' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'line-scale-party' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-scale-multiple' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-pulse-sync' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-beat' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'line-scale-pulse-out' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'line-scale-pulse-out-rapid' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-scale-ripple' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-scale-ripple-multiple' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-spin-fade-loader' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-spin-fade-loader' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'line-spin-fade-loader' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'line-spin-fade-loader' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'triangle-skew-spin' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'pacman' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'semi-circle-spin' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-grid-beat' }),
+			_react2.default.createElement(_Loaders2.default, { color: '#FFF', loadingStyle: 'ball-scale-random' })
+		);
+	};
+
+	_reactDom2.default.render(_react2.default.createElement(MyLoaders, null), document.getElementById('app'));
 
 /***/ },
 /* 2 */
@@ -19689,6 +19729,8 @@
 
 	__webpack_require__(161);
 
+	var _LoaderUtils = __webpack_require__(165);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -19708,14 +19750,20 @@
 
 		_createClass(Loaders, [{
 			key: 'getPlaceholderDiv',
-			value: function getPlaceholderDiv(divCount) {
-				if (divCount <= 0) return null;
+			value: function getPlaceholderDiv() {
+				var childrenCount = (0, _LoaderUtils.getDivCount)(this.props.loadingStyle);
 				var children = [];
 				var childStyle = {
 					backgroundColor: this.props.color
 				};
-				for (var i = 0; i < divCount; i++) {
-					children.push(_react2.default.createElement('div', { style: childStyle }));
+				if ('width' in this.props) {
+					childStyle.width = this.props.width;
+				}
+				if ('height' in this.props) {
+					childStyle.height = this.props.height;
+				}
+				for (var i = 0; i < childrenCount; i++) {
+					children.push(_react2.default.createElement('div', { key: i, style: childStyle }));
 				}
 				return children;
 			}
@@ -19727,8 +19775,8 @@
 					{ className: 'loader' },
 					_react2.default.createElement(
 						'div',
-						{ className: 'loader-inner ball-pulse' },
-						this.getPlaceholderDiv(3)
+						{ className: "loader-inner " + this.props.loadingStyle },
+						this.getPlaceholderDiv()
 					)
 				);
 			}
@@ -19741,11 +19789,15 @@
 
 
 	Loaders.propTypes = {
-		color: _react2.default.PropTypes.string
+		color: _react2.default.PropTypes.string,
+		loadingStyle: _react2.default.PropTypes.string,
+		width: _react2.default.PropTypes.string,
+		height: _react2.default.PropTypes.string
 	};
 
 	Loaders.defaultProps = {
-		color: '#FFF'
+		color: '#FFF',
+		loadingStyle: 'ball-clip-rotate'
 	};
 
 /***/ },
@@ -20096,6 +20148,97 @@
 		if(oldSrc)
 			URL.revokeObjectURL(oldSrc);
 	}
+
+
+/***/ },
+/* 165 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	var style2div = {
+		'ball-pulse': 3,
+		'ball-grid-pulse': 9,
+		'ball-clip-rotate': 1,
+		'ball-clip-rotate-pulse': 2,
+		'square-spin': 1,
+		'ball-clip-rotate-multiple': 2,
+		'ball-pulse-rise': 5,
+		'ball-rotate': 1,
+		'cube-transition': 2,
+		'ball-zig-zag': 2,
+		'ball-zig-zag-deflect': 2,
+		'ball-triangle-path': 3,
+		'ball-scale': 1,
+		'line-scale': 5,
+		'line-scale-party': 4,
+		'ball-scale-multiple': 3,
+		'ball-pulse-sync': 3,
+		'ball-beat': 3,
+		'line-scale-pulse-out': 5,
+		'line-scale-pulse-out-rapid': 5,
+		'ball-scale-ripple': 1,
+		'ball-scale-ripple-multiple': 3,
+		'ball-spin-fade-loader': 8,
+		'line-spin-fade-loader': 8,
+		'triangle-skew-spin': 1,
+		'pacman': 5,
+		'semi-circle-spin': 1,
+		'ball-grid-beat': 9,
+		'ball-scale-random': 3
+	};
+
+	function getDivCount(style) {
+		if (style2div.hasOwnProperty(style)) {
+			return style2div[style];
+		} else {
+			throw new Error(style + ' is not defined!!');
+		}
+	}
+
+	exports.getDivCount = getDivCount;
+
+/***/ },
+/* 166 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(167);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(164)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./main.css", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./main.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 167 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(163)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".main-content > div {\n\tdisplay: flex;\n\tfloat: left;\n\twidth: 200px;\n\theight: 200px;\n\talign-items: center;\n    justify-content: center;\n}", ""]);
+
+	// exports
 
 
 /***/ }
